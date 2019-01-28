@@ -7,9 +7,9 @@ script:
     - # TL_USER:  The Twistlock user with the CI User role
     - # TL_PASS:  The password for this user account
     - # TL_CONSOLE_URL:  The base URL for the console -- http://console.<my_company>.com:8083 -- without a trailing /
-    - TL_USER=<username for CI user>
-    - TL_PASS=<password>
-    - TL_CONSOLE_URL=<url>
+    - TL_USER=ciuser
+    - TL_PASS=ciuser
+    - TL_CONSOLE_URL=https://console-demo.jpadams.p.twistlock.com
     - curl -k -u $TL_USER:$TL_PASS --output ~/app/twistcli $TL_CONSOLE_URL/api/v1/util/twistcli
     - # ...and ensure it's executable.
     - sudo chmod a+x ./twistcli
